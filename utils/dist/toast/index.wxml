@@ -1,0 +1,4 @@
+<!--wxss/dist/toast/index.wxml-->
+<template name="zan-toast">
+  <view class="zan-toast" wx:if="{{ zanToast.show }}" bindtap="clearZanToast">{{ zanToast.title }}</view>
+</template>

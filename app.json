@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/login/login",
+    "pages/me/me",
+    "pages/control/control",
+    "pages/camera/camera",
+    "pages/about/about"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#fafff0",
+    "color": "#333333",
+    "borderStyle": "white",
+    "selectedColor": "#9ACD32",
+    "list": [
+      {
+        "pagePath": "pages/me/me",
+        "text": "个人中心",
+        "iconPath": "images/icon/account.png",
+        "selectedIconPath": "images/icon/account1.png"
+      },
+      {
+        "pagePath": "pages/control/control",
+        "text": "数值控制",
+        "iconPath": "images/icon/account.png",
+        "selectedIconPath": "images/icon/account1.png"
+      },
+      {
+        "pagePath": "pages/camera/camera",
+        "text": "实时图像",
+        "iconPath": "images/icon/account.png",
+        "selectedIconPath": "images/icon/account1.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+     "desc": "你的位置信息将用于获取天气情况或定位"
+    }
+  },  
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

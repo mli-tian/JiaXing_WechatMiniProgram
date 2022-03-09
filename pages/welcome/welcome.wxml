@@ -1,0 +1,5 @@
+<!--pages/welcome/welcome.wxml-->
+<view>
+  <button class="weui-btn weui-btn_primary" bindtap="login">登陆</button>
+  <button class="weui-btn weui-btn_primary" bindtap="index">注册</button>
+</view>

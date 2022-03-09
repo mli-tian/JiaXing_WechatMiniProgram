@@ -1,0 +1,83 @@
+<page-meta root-font-size="system"/>
+
+<view class="weui-form">
+  <view class="weui-form__text-area">
+    <h2 class="weui-form__title">注册页面</h2>
+  </view>
+  <view class="weui-form__control-area">
+    <view class="weui-cells__group weui-cells__group_form">
+      <view class="weui-cells__title">注册信息填写</view>
+      <view class="weui-cells">
+        <view class="weui-cell weui-cell_active">
+          <view class="weui-cell__hd"><label class="weui-label">昵称</label></view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" bindinput="getName" placeholder="请输入用户名" placeholder-class="weui-input__placeholder"/>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_active">
+          <view class="weui-cell__hd">
+                          <label class="weui-label">手机号码</label>
+                      </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" type="number" bindinput="getAccount" placeholder="请输入手机号" placeholder-class="weui-input__placeholder" />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_active">
+          <view class="weui-cell__hd">
+                          <label class="weui-label">密码</label>
+                      </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" bindinput="getPassword" placeholder="请输入密码" placeholder-class="weui-input__placeholder" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="weui-form__control-area">
+    <view class="weui-cells__group weui-cells__group_form">
+      <view class="weui-cells__title">设备信息绑定</view>
+      <view class="weui-cells">
+        <view class="weui-cell weui-cell_active">
+          <view class="weui-cell__hd">
+                          <label class="weui-label">M APIKey</label>
+                      </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" bindinput="getMAPIKey" placeholder="请输入MQTT-APIKey" placeholder-class="weui-input__placeholder" />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_active">
+          <view class="weui-cell__hd">
+                          <label class="weui-label">M 设备ID</label>
+                      </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" bindinput="getMDeviceID" placeholder="请输入MQTT-设备ID" placeholder-class="weui-input__placeholder" />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_active">
+          <view class="weui-cell__hd">
+                          <label class="weui-label">H APIKey</label>
+                      </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" bindinput="getHAPIKey" placeholder="请输入HTTP-APIKey" placeholder-class="weui-input__placeholder" />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_active">
+          <view class="weui-cell__hd">
+                          <label class="weui-label">H 设备ID</label>
+                      </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" bindinput="getHDeviceID" placeholder="请输入HTTP-设备ID" placeholder-class="weui-input__placeholder" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="weui-form__opr-area">
+    <a aria-role="button" class="weui-btn weui-btn_primary" bindtap="register">注册</a>
+  </view>
+  <view class="weui-form__extra-area">
+    <view class="weui-footer">
+      <view class="weui-footer__text">Copyright © 2021-2022 </view>
+    </view>
+  </view>
+</view>

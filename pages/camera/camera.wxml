@@ -1,0 +1,16 @@
+<!--pages/camera/camera.wxml-->
+<text>\n</text>
+<view class="more-list">
+    <view  class="issue-link">
+        <view class="more-btn">
+            <text class="btn-name">设备状态</text>
+            <view class="btn-open">
+                    <text wx:if = "{{online==true}}" class="btn-text">在线</text>
+                    <text wx:else class="btn-text">离线--历史数据</text>
+            </view>
+        </view>
+    </view>
+    <view>{{time}}</view>
+    <image src="{{img}}"></image>
+    <view>{{img}}</view>
+</view>
