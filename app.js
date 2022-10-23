@@ -1,6 +1,7 @@
 // app.js
 App({
   onLaunch() {
+    // 云存储空间的加载
     wx.cloud.init({
       env:'cloud1-4gemaq12664412e4'
     })
@@ -15,12 +16,15 @@ App({
       }
     })
   },
+  //全局变量
   globalData: {
+    latitude:'',
+    longitude:'',
     gm_apikey:'',
     gm_deviceid:'',
     gm_online:'',
     gh_apikey:'',
     gh_deviceid:'',
-    gh_online:''
+    g_isSafe:true,
   }
 })

@@ -33,6 +33,7 @@ Page({
       })
       return
     }
+    //校验密码
     if(password.length<4){
       wx.showToast({
         icon:'none',
@@ -105,7 +106,7 @@ Page({
               title: '登陆成功',
             })
             wx.switchTab({
-              url: '../me/me'
+              url: '../control/control'
             })
             wx.setStorageSync('user', user)
           }

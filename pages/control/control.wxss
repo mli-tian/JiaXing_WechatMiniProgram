@@ -1,4 +1,10 @@
 /* pages/control/control.wxss */
+.back{
+  width: 750rpx;
+  height: 2000rpx;
+  background-image: url('https://636c-cloud1-4gemaq12664412e4-1309899523.tcb.qcloud.la/background/backe.jpg?sign=76fa3bb9810080bc6b2b79992114fe8d&t=1648522648');
+	background-size: 100% 100%;
+}
 .container{
   background-color: #f6f6f6;
   padding: 0;
@@ -71,7 +77,6 @@
   flex-shrink: 0;
   padding-right: 30rpx;
 }
-
 /**more-list**/
 .more-list {
   flex: 1;
@@ -114,7 +119,6 @@
   border-radius: 5px;
   margin: 40rpx 3%;
 }
-
 /* pages/workbench/dianbiao.wxss */
 .container{
   background-color: #f6f6f6;
@@ -153,6 +157,16 @@
   flex: 1;
   color:#6b6b6b;
 }
+.btn-text-right {
+  color:cadetblue;
+  font-weight: bold;
+  justify-items: center;
+  align-items: center;
+}
+.btn-text-worry {
+  flex: 1;
+  color:#e55c5c;
+}
 .btn-open {
   display: flex;
   align-items: center;
@@ -163,8 +177,16 @@
   width: 18rpx;
   height: 27rpx;
 }
-#map{ width: 100%; height:30%; }
-
+.ec-canvas {
+  background-color: #f6f6f6;
+  width: 100%;
+  height:38%;
+}
+.ec-canvas-two {
+  background-color: #f6f6f6;
+  width: 100%;
+  height:31%;
+}
 /* 分隔线 */
 .hr {
   width: 96%;

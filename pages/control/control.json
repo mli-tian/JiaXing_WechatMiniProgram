@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "控制界面"
+  "usingComponents": {
+    "ec-canvas": "../../ec-canvas/ec-canvas"},
+  "navigationBarTitleText": "控制界面",
+  "navigationBarBackgroundColor": "#082E54",
+  "navigationBarTextStyle": "white"
 }

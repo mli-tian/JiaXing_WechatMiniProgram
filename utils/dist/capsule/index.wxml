@@ -1,4 +1,4 @@
-<!--wxss/dist/badge/index.wxml-->
+<!--utils/dist/capsule/index.wxml-->
 <template name="capsule">
   <view class="zan-capsule zan-capsule--{{type}}">
     <block wx:if="{{color}}">

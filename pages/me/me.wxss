@@ -1,4 +1,5 @@
 /* pages/me/me.wxss */
+#map{ width: 100%; height:10% }
 .the-weather {
   width: 100%;
   overflow: hidden;
@@ -26,6 +27,7 @@
   color: #333;
   font-size: 40rpx;
   font-weight: 600;
+ 
 }
 .wea-city .c-temp {
   margin-top: 20rpx;
@@ -38,6 +40,7 @@
   font-size: 30rpx;
   color: cornflowerblue;
 }
+
 .wea-life {
   width: 50%;
   min-height: 20rpx;
@@ -61,3 +64,76 @@
   -webkit-line-clamp: 2;
   overflow: hidden;
 }
+
+.button-sp-area{padding-top:8px;text-align:center}
+.weui-btn_mini{margin-right:4px}
+.official{
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 20rpx;
+  background-color: white;
+  border-radius: 0rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size:40rpx;
+  background-color: transparent;   /*按钮透明*/
+  background: transparent;   /*设置背景颜色一致*/
+  border-color: transparent; /*设置边框颜色一致*/
+  text-align: center;
+  line-height: 38px; 
+}
+.reason_txt{
+  font-size: 32rpx;
+  color: #333333;
+  display: table;
+  width: auto;
+  white-space: nowrap;
+  border-spacing: 0.5rem 0;
+  margin-left: 28rpx;
+  margin-right: 28rpx;
+}
+.reason_txt::before,.reason_txt::after{
+  display: table-cell;
+  content: "";
+  width: 50%;
+  background: linear-gradient(#000000, #D8D8D8) repeat-x center;
+  background-size: 1rem 1rem;
+}
+.btemp{
+  text-align: center;
+  font-family:"STKaiti";
+  font-weight:bold;
+  font-size:larger;
+  color: rgb(255, 94, 0);
+}
+.btempe{
+  text-align: center;
+  font-family:"STKaiti";
+  font-weight:600;
+  font-size:large;
+  color:#666;
+}
+.banners{
+  width: 100%;
+  height: 300rpx;
+}
+.banners image{
+  height: 100%;
+  width: 100%;
+}
+.contain{
+  display: flex;
+  flex-direction: row;
+}
+.bcontain{
+  display: flex;
+  flex-direction: column;
+}
+.btext{
+  align-items: center;
+  height:100%;
+}
+
+  

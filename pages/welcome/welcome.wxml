@@ -1,5 +1,22 @@
 <!--pages/welcome/welcome.wxml-->
 <view>
-  <button class="weui-btn weui-btn_primary" bindtap="login">登陆</button>
-  <button class="weui-btn weui-btn_primary" bindtap="index">注册</button>
+  <view class="head-bdg" style="background-image:url({{BackgroundImg}})">
+  <!--<view class="head-bg" >-->
+    <text>\n</text>
+    <text>\n</text>
+    <view class="a">
+    <image src="cloud://cloud1-4gemaq12664412e4.636c-cloud1-4gemaq12664412e4-1309899523/title/iFonts--5b0.png" mode="aspectFit" class="image"/>
+    </view>
+    <text>\n</text>
+    <text>\n</text>
+    <text>\n</text>
+    <text>\n</text>
+    <text>\n</text>
+    <text>\n</text>
+    <text>\n</text>
+    <text>\n</text>
+    <button class="weui-btn weui-btn_disabled weui-btn_primary" bindtap="login">登  录</button>
+    <text>\n</text>
+    <button class="weui-btn weui-btn_primary" bindtap="index">注  册</button>
+  </view>
 </view>

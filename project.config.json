@@ -39,9 +39,9 @@
     "showES6CompileOption": false
   },
   "compileType": "miniprogram",
-  "libVersion": "2.22.1",
+  "libVersion": "2.19.6",
   "appid": "wx51b44e5392f41826",
-  "projectname": "miniprogram",
+  "projectname": "program-jiaxing-two(1)",
   "debugOptions": {
     "hidedInDevtools": []
   },

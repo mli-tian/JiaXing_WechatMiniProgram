@@ -1,4 +1,6 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText": "嘉行"
+  "navigationBarTitleText": "嘉行",
+  "navigationBarBackgroundColor": "#082E54",
+  "navigationBarTextStyle": "white"
 }

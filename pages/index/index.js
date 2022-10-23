@@ -1,4 +1,4 @@
-// index.js
+// pages/index/index.js
 // 获取应用实例
 const app = getApp()
 Page({
@@ -172,21 +172,7 @@ Page({
       })
       return
     }
-    // wx.cloud.database().collection('user').where({
-    //   ACCOUNT:account
-    // }).get({
-    //   success:function(res){
-    //       repeat=true
-    //   }
-    // })
-    // if(repeat){
-    //   wx.showToast({
-    //     icon:'none',
-    //     title: '手机号码已注册',
-    //   })
-    //   return
-    // }
-    //校验api和deviceid
+    //校验mapikey
     if(mapikey==''){
       wx.showToast({
         icon:'none',
@@ -194,6 +180,7 @@ Page({
       })
       return
     }
+    //校验mdeviceid
     if(mdeviceid==''){
       wx.showToast({
         icon:'none',
@@ -201,6 +188,7 @@ Page({
       })
       return
     }
+    //校验hapikey
     if(hapikey==''){
       wx.showToast({
         icon:'none',
@@ -208,6 +196,7 @@ Page({
       })
       return
     }
+    //校验hdeviceid
     if(hdeviceid==''){
       wx.showToast({
         icon:'none',

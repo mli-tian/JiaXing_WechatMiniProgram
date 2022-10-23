@@ -4,10 +4,11 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/login/login",
-    "pages/me/me",
     "pages/control/control",
     "pages/camera/camera",
-    "pages/about/about"
+    "pages/me/me",
+    "pages/about/about",
+    "pages/call/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -16,28 +17,28 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "backgroundColor": "#fafff0",
-    "color": "#333333",
+    "backgroundColor": "#082E54",
+    "color": "#FFFFFF",
     "borderStyle": "white",
     "selectedColor": "#9ACD32",
     "list": [
       {
-        "pagePath": "pages/me/me",
-        "text": "个人中心",
-        "iconPath": "images/icon/account.png",
-        "selectedIconPath": "images/icon/account1.png"
-      },
-      {
         "pagePath": "pages/control/control",
         "text": "数值控制",
-        "iconPath": "images/icon/account.png",
-        "selectedIconPath": "images/icon/account1.png"
+        "iconPath": "images/icon/b.off.png",
+        "selectedIconPath": "images/icon/b.on.png"
       },
       {
         "pagePath": "pages/camera/camera",
         "text": "实时图像",
-        "iconPath": "images/icon/account.png",
-        "selectedIconPath": "images/icon/account1.png"
+        "iconPath": "images/icon/c.off.png",
+        "selectedIconPath": "images/icon/c.on.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "个人中心",
+        "iconPath": "images/icon/a.off.png",
+        "selectedIconPath": "images/icon/a.on.png"
       }
     ]
   },
@@ -46,7 +47,12 @@
      "desc": "你的位置信息将用于获取天气情况或定位"
     }
   },  
+  "plugins": {  
+    "WechatSI": {    
+      "version": "0.3.4",  
+      "provider": "wx069ba97219f66d99"
+    }
+  },
   "style": "v2",
-  "sitemapLocation": "sitemap.json",
-  "lazyCodeLoading": "requiredComponents"
+  "sitemapLocation": "sitemap.json"
 }

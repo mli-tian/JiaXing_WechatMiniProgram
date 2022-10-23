@@ -1,16 +1,50 @@
 <!--pages/camera/camera.wxml-->
-<text>\n</text>
-<view class="more-list">
-    <view  class="issue-link">
-        <view class="more-btn">
-            <text class="btn-name">设备状态</text>
-            <view class="btn-open">
-                    <text wx:if = "{{online==true}}" class="btn-text">在线</text>
-                    <text wx:else class="btn-text">离线--历史数据</text>
+<view class="back">
+    <text>\n</text>
+    <view class="more-list">
+        <view  class="issue-link">
+            <view class="more-btn">
+                <text>最近一次违规行为影像如下</text>
             </view>
         </view>
     </view>
-    <view>{{time}}</view>
-    <image src="{{img}}"></image>
-    <view>{{img}}</view>
+    <view class="imgstyle">
+        <image src="{{marker[0].imagesrc}}" mode="aspectFit" class="image-in"></image>
+    </view>  
+    <view class="btext" style="opacity:{{0.75}}">{{marker[0].date}}</view>
+
+<text>\n</text>
+    <view class="more-list">
+        <view  class="issue-link">
+            <view class="more-btn">
+                <text>历史违规行为影像如下</text>
+            </view>
+        </view>
+    </view>
+    <view class="list">
+        <view aria-role="button" class="goodbutton" bindtap="open1" style="opacity{{0.5}}"><view class="goodtext">{{marker[1].date}}</view></view>
+        <view wx:if="{{marker[1].gallery}}" aria-role="dialog" aria-modal="true" tabindex="0" class="weui-gallery fadeIn" bindtap="close1">
+            <view class="weui-gallery__img__wrp">
+                <image mode="aspectFit" class="weui-gallery__img" src="{{img}}"></image>
+            </view>
+        </view>
+        <view aria-role="button" class="goodbutton" bindtap="open2"><view class="goodtext">{{marker[2].date}}</view></view>
+        <view wx:if="{{marker[2].gallery}}" aria-role="dialog" aria-modal="true" tabindex="0" class="weui-gallery fadeIn" bindtap="close2">
+            <view class="weui-gallery__img__wrp">
+                <image mode="aspectFit" class="weui-gallery__img" src="{{img}}"></image>
+            </view>
+        </view>
+        <view aria-role="button" class="goodbutton" bindtap="open3"><view class="goodtext">{{marker[3].date}}</view></view>
+        <view wx:if="{{marker[3].gallery}}" aria-role="dialog" aria-modal="true" tabindex="0" class="weui-gallery fadeIn" bindtap="close3">
+            <view class="weui-gallery__img__wrp">
+                <image mode="aspectFit" class="weui-gallery__img" src="{{img}}"></image>
+            </view>
+        </view>
+        <view aria-role="button" class="goodbutton" bindtap="open4"><view class="goodtext">{{marker[4].date}}</view></view>
+        <view wx:if="{{marker[4].gallery}}" aria-role="dialog" aria-modal="true" tabindex="0" class="weui-gallery fadeIn" bindtap="close4">
+            <view class="weui-gallery__img__wrp">
+                <image mode="aspectFit" class="weui-gallery__img" src="{{img}}"></image>
+            </view>
+        </view>
+    </view>
 </view>

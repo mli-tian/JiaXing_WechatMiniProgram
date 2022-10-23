@@ -1,3 +1,4 @@
+/*pages/logs/logs*/
 .log-list {
   display: flex;
   flex-direction: column;

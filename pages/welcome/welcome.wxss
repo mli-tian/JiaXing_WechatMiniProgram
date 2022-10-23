@@ -1,1 +1,21 @@
 /* pages/welcome/welcome.wxss */
+.head-bg{
+    width: 750rpx;
+    height: 1500rpx;
+    background-image: url('https://636c-cloud1-4gemaq12664412e4-1309899523.tcb.qcloud.la/background/background1.png?sign=8e090131d7e5c4a282b0d47f826e4cde&t=1648343434');
+    background-size: 100% 100%;
+}
+.head-bdg{
+    width: 750rpx;
+    height: 1500rpx;
+    background-size: 100% 100%;
+}
+.a{
+    display: flex;
+    flex-direction: column;
+}
+.image{
+    width:380px;
+    justify-content: center;
+    align-items: center;
+}

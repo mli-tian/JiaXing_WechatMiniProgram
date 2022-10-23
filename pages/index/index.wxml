@@ -1,5 +1,6 @@
-<page-meta root-font-size="system"/>
+<!--pages/index/index.wxml-->
 
+<page-meta root-font-size="system"/>
 <view class="weui-form">
   <view class="weui-form__text-area">
     <h2 class="weui-form__title">注册页面</h2>

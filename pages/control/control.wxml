@@ -1,53 +1,61 @@
 <!--pages/control/control.wxml-->
-<text>\n</text>
-
-<view class="more-list">
-    <view  class="issue-link">
-        <view class="more-btn">
-            <text class="btn-name">设备状态</text>
-            <view class="btn-open">
+<view class="back">
+    <text>\n</text>
+    <view class="more-list">
+        <view  class="issue-link">
+            <view class="more-btn">
+                <text class="btn-name">设备状态</text>
+                <view class="btn-open">
                     <text wx:if = "{{online==true}}" class="btn-text">在线</text>
                     <text wx:else class="btn-text">离线--历史数据</text>
+                </view>
+            </view>
+            <view class="more-btn">
+                <text wx:if = "{{unHealty==0}}" class="btn-text-right">数据总览：您的健康数据正常！</text>
+                <text wx:elif = "{{unHealty==1}}" class="btn-text-worry">警告：经测试酒精含量超标请停止驾驶</text>
+                <text wx:elif = "{{unHealty==2}}" class="btn-text-worry">警告：经测试心率不正常请停止驾驶</text>
+                <text wx:elif = "{{unHealty==3}}" class="btn-text-worry">警告：经测试血氧不正常请停止驾驶</text>
             </view>
         </view>
     </view>
-</view>
-
-<view class="page" data-weui-theme="{{theme}}" data-weui-mode="{{mode}}">
-    <view class="weui-grids">
-        <navigator class="weui-grid" aria-role="button" url="javascript:">
-            <view class="weui-grid__label">酒精含量</view>
-            <view wx:if="{{alcohol>=20}}"><text class="weui-grid__label_not">{{alcohol}}mg/ml</text></view>
-            <view wx:else><text class="weui-grid__label_ok">{{alcohol}}mg/ml</text></view>
-        </navigator>
-        <navigator class="weui-grid" aria-role="button" url="javascript:">
-            <view class="weui-grid__label">心率</view>
-            <text class="weui-grid__label_ok">{{heartRate}}</text>
-        </navigator>
-        <navigator class="weui-grid" aria-role="button" url="javascript:">
-            <view class="weui-grid__label">血氧</view>
-            <view wx:if="{{spo2<=95}}"><text class="weui-grid__label_not">{{spo2}}%</text></view>
-            <view wx:else><text class="weui-grid__label_ok">{{spo2}}%</text></view>
-        </navigator>
+    <view class="page" data-weui-theme="{{theme}}" data-weui-mode="{{mode}}">
+        <view class="weui-grids">
+            <navigator class="weui-grid" aria-role="button" url="javascript:" >
+                <view class="weui-grid__label" color="#FFFFFF">酒精含量</view>
+                <view wx:if="{{alcohol>=20}}"><text class="weui-grid__label_not">{{alcohol}}mg/ml</text></view>
+                <view wx:elif="{{alcohol<=0}}"><text class="weui-grid__label_ok">0mg/ml</text></view>
+                <view wx:else><text class="weui-grid__label_ok">{{alcohol}}mg/ml</text></view>
+            </navigator>
+            <navigator class="weui-grid" aria-role="button" url="javascript:">
+                <view class="weui-grid__label">心率</view>
+                <view wx:if="{{heartRate<60}}"><text class="weui-grid__label_not">{{heartRate}}次/分钟</text></view>
+                <view wx:elif="{{heartRate>100}}"><text class="weui-grid__label_not">{{heartRate}}次/分钟</text></view>
+                <view wx:else><text class="weui-grid__label_ok">{{heartRate}}次/分钟</text></view>
+            </navigator>
+            <navigator class="weui-grid" aria-role="button" url="javascript:">
+                <view class="weui-grid__label">血氧</view>
+                <view wx:if="{{spo2<=94}}"><text class="weui-grid__label_not">{{spo2}}%</text></view>
+                <view wx:else><text class="weui-grid__label_ok">{{spo2}}%</text></view>
+            </navigator>
+        </view>
     </view>
-</view>
-
-<view class="page" data-weui-theme="{{theme}}" data-weui-mode="{{mode}}">
-    <view class="weui-grids">
-        <navigator class="weui-grid" aria-role="button" url="javascript:">
-            <view class="weui-grid__label">经度</view>
-            <text class="weui-grid__label">{{longitude}}</text>  
-        </navigator>
-        <navigator class="weui-grid" aria-role="button" url="javascript:">
-            <view class="weui-grid__label">纬度</view>
-            <text class="weui-grid__label">{{latitude}}</text>
-        </navigator>
+    <view class="page" data-weui-theme="{{theme}}" data-weui-mode="{{mode}}">
+        <view class="weui-grids">
+            <navigator class="weui-grid" aria-role="button" url="javascript:">
+                <view class="weui-grid__label">经度</view>
+                <text class="weui-grid__label">{{longitude}}</text>  
+            </navigator>
+            <navigator class="weui-grid" aria-role="button" url="javascript:">
+                <view class="weui-grid__label">纬度</view>
+                <text class="weui-grid__label">{{latitude}}</text>
+            </navigator>
+        </view>
     </view>
+<view class="ec-canvas" style="opacity:{{0.75}}">
+  <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ econe }}"></ec-canvas>
 </view>
-
-<text>\n</text>
-
-<map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location style="width: 100%; height: 300px;">
-</map>
-
+<view class="ec-canvas-two" style="opacity:{{0.75}}">
+  <ec-canvas id="mychart-dom-bar-two" canvas-id="mychart-bar-two" ec="{{ ectwo }}"></ec-canvas>
+</view>
+</view>
 
